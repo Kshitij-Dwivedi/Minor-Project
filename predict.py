@@ -13,7 +13,7 @@ pkl_filename = "pickle_model.pkl"
 model, vectorize, model2, vectorize2 = pickle.load(open(pkl_filename, 'rb'))    
 tweets_file = pd.read_csv("tweets.csv")
 # flags,comments_id,comments = list(comment_file["flag"]),list(comment_file["comments_id"]),list(comment_file["comments"])   
-tweets=tweets_file.iloc[:, 1].values
+tweets=tweets_file.iloc[:, 0].values
 processed_tweets = []
 hashtags = []
 # print(tweets)
