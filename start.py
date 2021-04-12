@@ -53,6 +53,6 @@ prediction2 = model2.predict(X2_test)
 tuple_objects = (model, vectorizer, model2, vectorizer2) 
 pkl_filename = "pickle_model.pkl"
 pickle.dump(tuple_objects, open(pkl_filename, 'wb'))    
-from sklearn.metrics import accuracy_score
-print(accuracy_score(y_test, prediction))
-print(accuracy_score(y2_test, prediction2))
+from sklearn.metrics import classification_report
+print(classification_report(y_test, prediction))
+print(classification_report(y2_test, prediction2))
