@@ -45,6 +45,8 @@ Y_predict = model.predict_proba(X_predict)
 X2_predict = vectorize2.transform(hashtags).toarray()
 Y2_predict = model2.predict_proba(X2_predict)
 predictions =[]
+# print(Y_predict)        
+# print(Y2_predict)
 for pr in range(0,len(Y2_predict)):
     # print(Y2_predict[pr][1])
     if Y2_predict[pr][1]==0.4161057735809483:
@@ -57,6 +59,6 @@ for pr in range(0,len(Y2_predict)):
             predictions.append(1)
         else :
             predictions.append(0)         
-print(Y_predict)        
-print(Y2_predict)
+# print(Y_predict)        
+# print(Y2_predict)
 print(predictions)
